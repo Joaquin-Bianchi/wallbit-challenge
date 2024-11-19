@@ -7,13 +7,16 @@ Mi Solucion para el challenge de carrito de compras para el stream de Goncy x Wa
 - React
 - TypeScript
 - TailwindCSS
+- Vite JS
 
 ## Instalación
 
 1 Clonar el repo
+
 ```bash
  git clone https://github.com/Joaquin-Bianchi/wallbit-challenge.git
 ```
+
 2. Instalar las dependencias
 
 ```bash
@@ -29,5 +32,3 @@ Mi Solucion para el challenge de carrito de compras para el stream de Goncy x Wa
 ## Demo
 
 https://wallbit-challenge-umber.vercel.app/
-
-
