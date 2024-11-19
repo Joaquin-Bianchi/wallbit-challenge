@@ -1,17 +1,19 @@
 # Wallbit Frontend Challenge
 
-Challenge de carrito de compras para el stream de Goncy x Wallbit
+Mi Solucion para el challenge de carrito de compras para el stream de Goncy x Wallbit
 
 ## Tecnologías
 
 - React
-- Typescript
+- TypeScript
 - TailwindCSS
 
 ## Instalación
 
 1 Clonar el repo
-
+```bash
+ git clone https://github.com/Joaquin-Bianchi/wallbit-challenge.git
+```
 2. Instalar las dependencias
 
 ```bash
