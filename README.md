@@ -1,10 +1,10 @@
 # [Wallbit Frontend Challenge](https://github.com/goncy/wallbit-challenge)
 
 
-Mi Solucion para el challenge de carrito de compras para el stream de Goncy x Wallbit
+[Mi solucion](https://wallbit-challenge-umber.vercel.app/) para el challenge de carrito de compras para el stream de Goncy x Wallbit
 
 ![image](https://github.com/user-attachments/assets/0e4d1a91-74a6-4f21-b745-7165960100bd)
-                            Cuando esta vacio
+                            Cuando esta vacio el carrito
 
 ![image](https://github.com/user-attachments/assets/519bc431-340e-4cde-88c3-deef31243344)
 
