@@ -1,4 +1,4 @@
-import { Trash2 } from "lucide-react";
+import { Trash2 } from 'lucide-react';
 import { CartItem } from "../cart.interface";
 
 interface CartTableProps {
@@ -8,9 +8,9 @@ interface CartTableProps {
 
 function CartTable({ items, onRemove }: CartTableProps) {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto -mx-4 sm:mx-0">
       <table className="w-full mt-6">
-        <thead>
+        <thead className="hidden sm:table-header-group">
           <tr className="bg-wallbit-dark border-b border-gray-700">
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
               Producto
@@ -29,7 +29,7 @@ function CartTable({ items, onRemove }: CartTableProps) {
         </thead>
         <tbody className="divide-y divide-gray-700">
           {items.map((item) => (
-            <tr key={item.product.id} className="hover:bg-wallbit-card-hover">
+            <tr key={item.product.id} className="hover:bg-wallbit-card-hover flex flex-col sm:table-row mb-4 sm:mb-0">
               <td className="px-6 py-4 whitespace-nowrap">
                 <div className="flex items-center">
                   <img
@@ -48,14 +48,17 @@ function CartTable({ items, onRemove }: CartTableProps) {
                 </div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm text-gray-200 sm:hidden font-medium mb-1">Precio:</div>
                 <div className="text-sm text-gray-200">
                   ${item.product.price.toFixed(2)}
                 </div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm text-gray-200 sm:hidden font-medium mb-1">Cantidad:</div>
                 <div className="text-sm text-gray-200">{item.quantity}</div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm text-gray-200 sm:hidden font-medium mb-1">Total:</div>
                 <div className="text-sm text-gray-200">
                   ${(item.product.price * item.quantity).toFixed(2)}
                 </div>
@@ -77,3 +80,4 @@ function CartTable({ items, onRemove }: CartTableProps) {
 }
 
 export default CartTable;
+

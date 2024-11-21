@@ -1,8 +1,6 @@
-"use client";
-
 import { useState } from "react";
 import { ChevronRight, CreditCard, DollarSign, WalletIcon } from "lucide-react";
-import CustomAlert from "./CustomAlert"; // Asegúrate de que la ruta sea correcta
+import CustomAlert from "./CustomAlert";
 import toast from "react-hot-toast";
 
 interface TotalOrderProps {
@@ -31,11 +29,11 @@ function TotalOrder({ totalCost }: TotalOrderProps) {
   const handlePayWithWallbit = () => {
     toast(
       () => (
-        <div className="flex items-center  bg-white p-4 rounded-lg ">
+        <div className="flex items-center bg-white p-4 rounded-lg">
           <img
-            src="tuki.webp" // Reemplaza con la ruta de tu imagen
+            src="tuki.webp"
             alt="Custom Icon"
-            className="w-12 h-12 object-cover r"
+            className="w-12 h-12 object-cover rounded"
           />
         </div>
       ),
@@ -57,14 +55,14 @@ function TotalOrder({ totalCost }: TotalOrderProps) {
   };
 
   return (
-    <div className="bg-wallbit-card rounded-lg shadow-lg p-6 mb-6">
-      <div className="flex items-center space-x-2 mb-4 ">
+    <div className="bg-wallbit-card rounded-lg shadow-lg p-4 sm:p-6 mb-6">
+      <div className="flex items-center space-x-2 mb-4">
         <WalletIcon className="w-5 h-5 text-wallbit-blue" />
         <h2 className="text-xl font-semibold text-white">Resumen de compra</h2>
       </div>
 
       <div className="border-gray-700 py-4">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <div className="flex items-center space-x-1 mb-1">
               <DollarSign className="w-4 h-4 text-green-500" />
@@ -89,7 +87,7 @@ function TotalOrder({ totalCost }: TotalOrderProps) {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-4 mt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
         <button
           onClick={handlePayWithWallbit}
           className="bg-wallbit-dark text-white py-3 px-4 rounded-lg hover:bg-opacity-90 transition-colors flex items-center justify-between w-full"
@@ -118,7 +116,6 @@ function TotalOrder({ totalCost }: TotalOrderProps) {
         </button>
       </div>
 
-      {/* Alerta personalizada */}
       {isAlertVisible && (
         <CustomAlert messages={messages} onFinish={handleAlertFinish} />
       )}
@@ -127,3 +124,4 @@ function TotalOrder({ totalCost }: TotalOrderProps) {
 }
 
 export default TotalOrder;
+
